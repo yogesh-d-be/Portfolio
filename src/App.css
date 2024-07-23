@@ -19,7 +19,7 @@ body{
   padding: 65px 0px;
   display: flex;
   align-items: center;
-  
+  overflow: hidden;
 }
 
 .button-st{

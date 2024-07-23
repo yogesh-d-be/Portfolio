@@ -1,6 +1,5 @@
 .container{
     display: flex;
-    
     justify-content: center;
     align-items: center;
     padding: 0px 10px;
@@ -100,6 +99,9 @@
 }
 
 @media screen and (max-width: 470px){
+    .container{
+        margin-top: 19%;
+    }
     .about-content{
        display: flex;
        justify-content: center;
