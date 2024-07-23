@@ -56,7 +56,7 @@ const ContactForm = () => {
     }
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:3030/api/contact/form', formData);
+      const response = await axios.post('https://contact-wgqw.onrender.com/api/contact/form', formData);
       if (response.status === 200) {
         toast.success("Contact form submitted", {
           position: 'bottom-right'
