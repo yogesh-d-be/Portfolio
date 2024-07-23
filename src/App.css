@@ -22,12 +22,36 @@ body{
   overflow: hidden;
 }
 
-.button-st{
+.button-st {
   padding: 10px 14px;
-  background: rgb(42, 137, 240);
+  background: linear-gradient(45deg, #0022ff, #ff77ef);
   outline: none;
+  border: none;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   color: white;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-st::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(45deg, #0022ff, #ff77ef);
+  transition: all 0.4s;
+  z-index: 0;
+}
+
+.button-st:hover::before {
+  left: 0;
+}
+
+.button-st span {
+  position: relative;
+  z-index: 1;
 }

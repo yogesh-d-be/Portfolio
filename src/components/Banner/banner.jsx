@@ -27,7 +27,7 @@ function Banner(){
                         <motion.p variants={fadeIn('up',0.5)} initial="hidden" whileInView={'show'} viewport={{once:false, amount:0.7}}>Passionate about creating seamless user experiences and robust back-end solutions with MERN Stack.</motion.p>
                     </div>
                     <motion.div variants={fadeIn('up',0.6)} initial="hidden" whileInView={'show'} viewport={{once:false, amount:0.7}} className="btn">
-                        <button className="button-st" onClick={()=>scrollToSection('contact')}>Contact me</button>
+                        <button className="button-st" onClick={()=>scrollToSection('contact')}><span>Contact me</span></button>
                     </motion.div>
                     <motion.div variants={fadeIn('up',0.7)} initial="hidden" whileInView={'show'} viewport={{once:false, amount:0.7}}>
                         <a href="https://github.com/yogesh-d-be" target="_blank" rel="noreferrer"><FaGithub className="social-icon"/></a>

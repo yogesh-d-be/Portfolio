@@ -191,6 +191,7 @@
   margin-bottom: 30px;
   margin-top: 10px;
   animation: bounce 2s infinite;
+  cursor: pointer;
 }
 .whatsapp{
   width: 50px;
@@ -247,5 +248,8 @@
     margin-bottom: 10px;
     font-size: 1.5rem;
     color: #007bff;
+  }
+  .popup-animation{
+    right:12% ;
   }
 }

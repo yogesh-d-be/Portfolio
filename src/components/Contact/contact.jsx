@@ -10,6 +10,8 @@ import fadeIn from '../variants'
 import './contact.css'; 
 
 const ContactForm = () => {
+
+
   const [formData, setFormData] = useState({
     name: '',
     emailId: '',
@@ -82,7 +84,7 @@ const ContactForm = () => {
   const handleChat = async() => {
     const { mobileNumber } = formData;
   
-    
+  
    
   try{
     const {value: whatsappNumber} = await Swal.fire({
@@ -118,7 +120,7 @@ const ContactForm = () => {
 
       if(result.isConfirmed){
         const Number = '6374694062';
-        const message = `I need to talk to you`;
+        const message = `Hello, I would like to work together.`;
         const whatsappUrl = `https://wa.me/${Number}?text=${encodeURIComponent(message)}`;
 
 
@@ -217,7 +219,7 @@ const ContactForm = () => {
       </motion.div>
     </div>
 
-    <motion.div variants={fadeIn('right',0.4)} initial="hidden" whileInView={'show'} viewport={{once:false, amount:0.3}} className='whatsapp-box'>
+    <motion.div id='whatsapp' variants={fadeIn('right',0.4)} initial="hidden" whileInView={'show'} viewport={{once:false, amount:0.3}} className='whatsapp-box'>
       <img src={require('../../assets/whatsapp.png')} alt="whatsapp" className='whatsapp' onClick={handleChat}/>
     </motion.div>
     {
