@@ -17,7 +17,7 @@ function scrollToSection(id) {
 function Banner(){
     return(
         <>
-        <div className="box">
+        <div className="">
             <div className="banner-container">
                 <div>
                     <div><motion.h1 variants={fadeIn('up',0.3)} initial="hidden" whileInView={'show'} viewport={{once:false, amount:0.7}} className="role-name">YOGESH</motion.h1>
