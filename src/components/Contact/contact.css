@@ -1,0 +1,251 @@
+.contact-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.contact-container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  
+  flex-direction: row;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  background: #e9ecef68;
+  border-radius: 10px;
+    backdrop-filter: blur(10px);
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.contact-info h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.contact-info img {
+  max-width: 200px;
+  height: auto;
+  margin-top: 10px;
+ 
+}
+
+.contact-form-container {
+  flex: 2;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(38, 143, 255, 0.5);
+  outline: none;
+}
+
+.submit-button {
+  position: relative;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s;
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0);
+}
+
+.submit-button:hover:before {
+  transform: translateX(-50%) scale(1);
+}
+
+.submit-button:disabled {
+  background: #0056b3;
+  cursor: not-allowed;
+}
+
+.submit-button .ant-spin {
+  margin-right: 10px;
+}
+
+.submit-button .ant-spin-dot {
+  color: white !important;
+}
+
+.submit-button .ant-spin-dot i {
+  background-color: white !important;
+}
+
+@media (max-width: 800px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .contact-form-container {
+    width: 100%;
+  }
+  .contact-info img{
+    width: 100%;
+  }
+  .popup-animation{
+    right: 5%;
+  }
+  
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.whatsapp-box{
+  position: fixed;
+  right: 3%;
+  z-index: 50px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  animation: bounce 2s infinite;
+}
+.whatsapp{
+  width: 50px;
+  z-index: 150px;
+}
+
+.whole{
+  margin-bottom: 90px;
+}
+
+@keyframes typing{
+  from{width: 0;}
+  to {width: 100%}
+}
+
+@keyframes blink-caret {
+  from, to{border-color: transparent}
+  50%{border-color: black;}
+}
+
+.typing-animation{
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15rem solid black;
+  animation: typing 3.5s steps(40,end),
+  blink-caret .75s step-end infinite;
+  width: max-content;
+}
+
+.popup-animation{
+  position: absolute;
+  background-color: white;
+  padding: 12px 8px;
+  border-radius: 10px;
+  right: 7%;
+  animation: fadeIn 0.5s, fadeOut 0.5s 4.5s;
+}
+
+@keyframes fadeIn{
+  from {opacity:0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeOut{
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@media screen and (max-width:780px) {
+  .contact-form{
+    height: 700px;
+  }
+  .contact-info h1 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+}

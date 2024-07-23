@@ -1,0 +1,74 @@
+.profile{
+    width: 240px;
+}
+.banner-container{
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.role-name{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.role-box{
+    width: 380px;
+   font-size: 1.4rem;
+   margin-top: 5px;
+}
+.role-txt{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+    color: rgb(255, 251, 251);
+}
+.role-explain{
+    margin:14px 0px;
+    color: rgb(215, 212, 212);
+    width: 450px;
+    line-height: 1.6;
+}
+.btn{
+    margin: 12px 0px;
+}
+.social-icon{
+    color:white;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+/* .image{
+    background-color: black;
+    width: fit-content;
+    padding: 50px;
+    border-radius: 50%;
+} */
+.animated-text {
+    text-transform: uppercase;
+    color: rgb(108, 9, 108);
+  }
+  
+  .role {
+    font-size: 1.5rem; /* Adjust as needed */
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .banner-container{
+        text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 880px){
+    .role-explain{
+        width: 320px;
+    }
+    .role-box{
+        width: 320px;
+    }
+  }

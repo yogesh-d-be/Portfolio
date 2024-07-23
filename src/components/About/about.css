@@ -1,0 +1,113 @@
+.container{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.about-container{
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center;
+    
+}
+
+.about-container > div > h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+.about-container > div > p,h3{
+    color: rgb(215, 212, 212);
+    line-height: 1.6;
+    margin-bottom: 5px;
+    padding-right: 20px;
+}
+
+.about-img-box{
+    width: 40%;
+    display: flex;
+    justify-content: end;
+}
+
+
+.about-img{
+    mix-blend-mode: hard-light;
+    opacity: 60%;
+}
+
+.about-content{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.count-box{
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.count{
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #6600ff, #77FDFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.exp{
+    letter-spacing: 2px;
+    color: rgb(215, 212, 212);
+}
+
+@media screen and (max-width: 860px) {
+    .about-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-content > p,h3{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .about-img-box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .about-content{
+       display: flex;
+       justify-content: center;
+       margin-right: 15%;
+        width: 330px;
+        margin-bottom: 80px;
+    }
+    .about-container > div > h2{
+        font-size: 2.3rem;
+    }
+}
