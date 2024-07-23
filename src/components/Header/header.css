@@ -1,14 +1,14 @@
-.header{
-    margin-top: 20px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.header {
+  margin-top: 20px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.name{
-    font-weight: bolder;
-    background: linear-gradient(45deg, #ff0072, #77FDFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.name {
+  font-weight: bolder;
+  background: linear-gradient(45deg, #ff0072, #77fdff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
