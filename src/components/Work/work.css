@@ -85,6 +85,10 @@
   align-items: center;
 }
 
+.list{
+  padding: 0px 15px;
+}
+
 .overlay {
   position: absolute;
   bottom: 0;

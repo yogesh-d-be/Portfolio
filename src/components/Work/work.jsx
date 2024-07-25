@@ -12,27 +12,32 @@ const ProjectPage = () => {
       title: "Clone the Paytm UI",
       image: require("../../assets/payrupee.png"),
       tech: "HTML, CSS",
-      details: `
-        From the beginning of full stack development, I am starting with developing the Paytm website (static website).
-        The primary objective of this project is to gain hands-on experience in HTML and CSS.
-      `,
+      details: [
+        "From the beginning of full stack development, I am starting with developing the Paytm website (static website).",
+        "The primary objective of this project is to gain hands-on experience in HTML and CSS."
+      ],
       link: "https://upi-payrupee-46c27b.netlify.app",
     },
     {
-      title: "Tuneguru website",
+      title: "Tuneguru User Panel",
       image: require("../../assets/tuneguru.png"),
       tech: "React, Node.js, Express.js, MongoDB",
-      details: `
-        Currently, I am working on this project to develop my skills and enhance my knowledge.
-        
-        Implemented an intuitive admin panel to manage customer bookings effectively.
-        
-        Integrated Stripe payment gateway for seamless online transactions.
-        
-        Designed a responsive UI focusing on usability and accessibility.
-       
-      `,
+      details: [
+        "Currently, I am working on this project to develop my skills and enhance my knowledge.",
+        "Payment Integration: Integrated Stripe payment gateway to facilitate seamless and secure online transactions for customers, ensuring a user-friendly payment process. It have Cash & Card option to pay",
+        "Front-end Development Expertise: Designed and implemented a responsive and visually appealing user interface, focusing on usability and accessibility.",
+        "Back-end Proficiency: Developed robust back-end functionalities to support the platform's operations, including user authentication, booking management, and data handling."
+      ],
       link: "https://tuneguru.netlify.app/",
+    },
+    {
+      title: "Tuneguru Admin Panel",
+      image: require("../../assets/admin.png"),
+      tech: "React, Node.js, Express.js, MongoDB",
+      details: [
+        "Admin Panel Development: Implemented an intuitive admin panel to add services, list the services, show the contacted customers data, handle the professionals data and manage customer bookings effectively, enhancing user experience and operational efficiency."
+      ],
+      link: "https://master--tuneguru-admin-panel.netlify.app/",
     },
   ];
 
@@ -95,7 +100,11 @@ const ProjectPage = () => {
           <div className="modal-overlay">
             <div className="modal-content">
               <h2>{selectedProject.title}</h2>
-              <p>{selectedProject.details}</p>
+              <ul className="list">
+                {selectedProject.details.map((detail, index) => (
+                  <li key={index}>{detail}</li>
+                ))}
+              </ul>
               {selectedProject.link && (
                 <a
                   href={selectedProject.link}
