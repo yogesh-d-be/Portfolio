@@ -49,7 +49,7 @@ function About() {
             <div className="count-box">
               <div>
                 <div className="count">
-                  {inView ? <CountUp start={0} end={6} duration={3} /> : null}
+                  {inView ? <CountUp start={0} end={6} duration={5} /> : null}
                 </div>
                 <div className="exp">
                   Months of
