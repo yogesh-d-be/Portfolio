@@ -76,6 +76,13 @@ function Banner() {
               >
                 <span>Contact me</span>
               </button>
+              <a href="https://drive.google.com/uc?export=download&id=1DZr7qnO70d6kCpBbsOsEr7ItuWW7w_eL" download="My_Resume.pdf" target="_blank" rel="noopener noreferrer" className="resume">
+  <button className="button-sty">
+    <img src={require("../../assets/downloads.png")} alt="download" className="download" />
+    <span>My resume</span>
+  </button>
+</a>
+
             </motion.div>
             <motion.div
               variants={fadeIn("up", 0.7)}
