@@ -85,15 +85,15 @@ function Skills() {
           viewport={{ once: false, amount: 0.3 }}
           className="skills-category glass"
         >
-          <h3>Version Control</h3>
+          <h3>Styling</h3>
           <div className="skills-container">
             <div className="skill-card">
-              <FaGit className="skill-icon git" />
-              <p className="skill-name">Git</p>
+              <FaCss3Alt className="skill-icon css" />
+              <p className="skill-name">CSS3</p>
             </div>
             <div className="skill-card">
-              <FaGithub className="skill-icon github" />
-              <p className="skill-name">GitHub</p>
+              <SiTailwindcss className="skill-icon tailwind" />
+              <p className="skill-name">Tailwind CSS</p>
             </div>
           </div>
         </motion.div>
@@ -104,15 +104,15 @@ function Skills() {
           viewport={{ once: false, amount: 0.3 }}
           className="skills-category glass"
         >
-          <h3>Styling</h3>
+          <h3>Version Control</h3>
           <div className="skills-container">
             <div className="skill-card">
-              <FaCss3Alt className="skill-icon css" />
-              <p className="skill-name">CSS3</p>
+              <FaGit className="skill-icon git" />
+              <p className="skill-name">Git</p>
             </div>
             <div className="skill-card">
-              <SiTailwindcss className="skill-icon tailwind" />
-              <p className="skill-name">Tailwind CSS</p>
+              <FaGithub className="skill-icon github" />
+              <p className="skill-name">GitHub</p>
             </div>
           </div>
         </motion.div>

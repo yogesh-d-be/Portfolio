@@ -59,6 +59,7 @@ const ProjectPage = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
+          className="project-title"
         >
           Projects
         </motion.h1>
