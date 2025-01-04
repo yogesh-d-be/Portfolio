@@ -77,7 +77,7 @@ function Banner() {
                 <span>Contact me</span>
               </button>
               <a
-                href="https://drive.google.com/uc?export=download&id=1Utr0D3dahpgJUW-j2qdtXTVa6yhd01DW"
+                href="https://drive.google.com/uc?export=download&id=1x9FIhgpEqpGv6XHEwskL_UiM332rGY2i"
                 download="My_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
