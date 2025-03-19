@@ -76,13 +76,17 @@ function Banner() {
               >
                 <span>Contact me</span>
               </button>
-              <a
-                href="https://drive.google.com/uc?export=download&id=1x9FIhgpEqpGv6XHEwskL_UiM332rGY2i"
-                download="My_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="resume"
-              >
+
+              {/* https://drive.google.com/file/d/1p5CDAArN87fbvVM0vOHaKwPERnbV97dg/view?usp=sharing */}
+             <a
+  href="https://drive.google.com/uc?export=download&id=1p5CDAArN87fbvVM0vOHaKwPERnbV97dg"
+  download="My_Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="resume"
+>
+
+
                 <button className="button-sty">
                   <img
                     src={require("../../assets/downloads.png")}

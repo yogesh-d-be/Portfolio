@@ -9,35 +9,52 @@ const ProjectPage = () => {
 
   const projects = [
     {
-      title: "Clone the Paytm UI",
-      image: require("../../assets/payrupee.png"),
-      tech: "HTML, CSS",
+      title: "Multi-Vendor Service Booking Website",
+      image: require("../../assets/service_booking.jpg"),
+      tech: "Node.js, Express.js, MongoDB, WebSocket, AWS S3, Razorpay",
+      description: "A dynamic multi-vendor service booking platform designed to streamline bookings, real-time tracking, and secure payments.",
       details: [
-        "From the beginning of full stack development, I am starting with developing the Paytm website (static website).",
-        "The primary objective of this project is to gain hands-on experience in HTML and CSS."
+       "Seamless Vendor Management: Efficient handling of multiple service providers under one platform.",
+      "Live Booking Updates: Integrated WebSocket for real-time booking status updates.",
+      "Secure Transactions: Razorpay-powered payment system ensuring smooth and reliable payments."
       ],
-      link: "https://upi-payrupee-46c27b.netlify.app",
+      link: "#",
     },
     {
-      title: "Tuneguru User Panel",
-      image: require("../../assets/tuneguru.png"),
-      tech: "React, Node.js, Express.js, MongoDB",
+      title: "E-Commerce Platform",
+      image: require("../../assets/ecoomerce.jpg"),
+      tech: "Node.js, Express.js, MongoDB, Razorpay, AWS-S3",
+      description: "A high-performance e-commerce platform supporting thousands of products, real-time order status update, and secure payment processing.",
       details: [
-        "Currently, I am working on this project to develop my skills and enhance my knowledge.",
-        "Payment Integration: Integrated Stripe payment gateway to facilitate seamless and secure online transactions for customers, ensuring a user-friendly payment process. It have Cash & Card option to pay",
-        "Front-end Development Expertise: Designed and implemented a responsive and visually appealing user interface, focusing on usability and accessibility.",
-        "Back-end Proficiency: Developed robust back-end functionalities to support the platform's operations, including user authentication, booking management, and data handling."
+        "Optimized Backend: High-speed API response and efficient database management.",
+      "Real-Time Order Tracking: Stay updated with live order statuses using WebSocket.",
+      "Secure & Scalable Payments: Integrated Razorpay for hassle-free transactions."
       ],
-      link: "https://tuneguru.netlify.app/",
+      link: "#",
     },
     {
-      title: "Tuneguru Admin Panel",
-      image: require("../../assets/admin.png"),
-      tech: "React, Node.js, Express.js, MongoDB",
+      title: "Temple Donation Management System",
+      image: require("../../assets/temple.jpg"),
+      tech: "Node.js, Express.js, MongoDB",
+      description: "A smart donation management system designed to handle contributions, financial tracking, and automated receipts with ease.",
       details: [
-        "Admin Panel Development: Implemented an intuitive admin panel to add services, list the services, show the contacted customers data, handle the professionals data and manage customer bookings effectively, enhancing user experience and operational efficiency."
+       "Admin Control & User Management: Super Admin panel for managing admins, users, and donation records.",
+      "Automated Reporting: Generates spending reports and real-time donation insights.",
+      "Flexible Payment Options: One-time & recurring donations with Razorpay integration."
       ],
-      link: "https://master--tuneguru-admin-panel.netlify.app/",
+      link: "#",
+    },
+    {
+      title: "Real-Time Chat System",
+      image: require("../../assets/chat.jpg"),
+      tech: "Node.js, WebSocket, MongoDB, Express.js, Redis",
+      description: "An ultra-fast chat system built for real-time messaging, powered by WebSocket and Redis for optimal performance.",
+      details: [
+       "Instant Messaging: Lightning-fast communication with real-time updates.",
+      "Scalable & Secure: Optimized with Redis for efficient message caching.",
+      "User & Admin Interactions: Seamless user-to-user and admin chat functionality."
+      ],
+      link: "#",
     },
   ];
 
@@ -61,7 +78,7 @@ const ProjectPage = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="project-title"
         >
-          Projects
+          My Projects 🚀
         </motion.h1>
         <motion.div
           variants={fadeIn("left", 0.4)}
@@ -77,21 +94,13 @@ const ProjectPage = () => {
               whileInView={"show"}
               viewport={{ once: false, amount: 0.3 }}
               key={index}
-              className="flip-card"
+              className="project-card"
               onClick={() => showModal(project)}
             >
-              <div className="flip-card-inner">
-                <div
-                  className="flip-card-front"
-                  style={{ backgroundImage: `url(${project.image})` }}
-                >
-                  <div className="overlay">
-                    <h3>{project.title}</h3>
-                  </div>
-                </div>
-                <div className="flip-card-back">
-                  <p>Tech I used: {project.tech}</p>
-                </div>
+              <div className="project-image" style={{ backgroundImage: `url(${project.image})` }}></div>
+              <div className="project-overlay">
+                <h3>{project.title}</h3>
+                <p>{project.tech}</p>
               </div>
             </motion.div>
           ))}
@@ -101,12 +110,13 @@ const ProjectPage = () => {
           <div className="modal-overlay">
             <div className="modal-content">
               <h2>{selectedProject.title}</h2>
+              <p className="describe">{selectedProject.description}</p>
               <ul className="list">
                 {selectedProject.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
                 ))}
               </ul>
-              {selectedProject.link && (
+              {/* {selectedProject.link && (
                 <a
                   href={selectedProject.link}
                   target="_blank"
@@ -115,7 +125,7 @@ const ProjectPage = () => {
                 >
                   View More
                 </a>
-              )}
+              )} */}
               <button onClick={handleClose} className="modal-close-button">
                 Close
               </button>

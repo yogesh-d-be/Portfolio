@@ -49,16 +49,17 @@ function About() {
             <div className="count-box">
               <div>
                 <div className="count">
-                  {inView ? <CountUp start={0} end={6} duration={5} /> : null}
+                  {inView ? <CountUp start={0} end={1} duration={5} /> : null}
                 </div>
                 <div className="exp">
-                  Months of
+                  {/* Months of */}
+                  Year of
                   <br /> Experience
                 </div>
               </div>
               <div>
                 <div className="count">
-                  {inView ? <CountUp start={0} end={2} duration={3} /> : null}
+                  {inView ? <CountUp start={0} end={6} duration={3} /> : null}
                 </div>
                 <div className="exp">
                   Projects
