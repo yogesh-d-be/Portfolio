@@ -6,7 +6,6 @@ import Banner from "./components/Banner/banner";
 import About from "./components/About/about";
 import Skills from "./components/Skills/skills";
 import ProjectPage from "./components/Work/work";
-import WhatsAppFloat from "./components/whatsappFloat"
 import './App.css'
 
 function App() {

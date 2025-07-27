@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGithub, FaGit,
+  FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGithub, FaGit,
 } from "react-icons/fa";
 import {
   SiMongodb, SiExpress, SiTailwindcss, SiPostman, SiFigma, SiRedux, SiDocker, SiRazorpay, SiStripe, SiSupabase, SiVisualstudiocode, SiClickup, SiNextdotjs, SiRedis
