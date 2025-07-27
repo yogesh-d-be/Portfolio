@@ -1,103 +1,101 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaNodeJs,
-  FaGithub,
-  FaGit,
+  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGithub, FaGit,
 } from "react-icons/fa";
 import {
-  SiMongodb,
-  SiExpress,
-  SiTailwindcss,
-  SiPostman,
-  SiVisualstudiocode,
-  SiAwsamplify,
-  SiSupabase,
-  SiRedux,
-  SiStripe,
-  SiRazorpay,
+  SiMongodb, SiExpress, SiTailwindcss, SiPostman, SiFigma, SiRedux, SiDocker, SiRazorpay, SiStripe, SiSupabase, SiVisualstudiocode, SiClickup, SiNextdotjs, SiRedis
 } from "react-icons/si";
+import { TbBrandVercel } from "react-icons/tb";
 import fadeIn from "../variants";
 import "./skills.css";
 
 function Skills() {
   const skillsData = [
     {
-      category: "Frontend",
+      category: "Languages & Frameworks",
       skills: [
-        { name: "HTML5", icon: <FaHtml5 className="skill-icon html" /> },
-        { name: "CSS3", icon: <FaCss3Alt className="skill-icon css" /> },
-        { name: "JavaScript", icon: <FaJsSquare className="skill-icon javascript" /> },
-        { name: "React.js", icon: <FaReact className="skill-icon react" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="skill-icon tailwind" /> },
-      ],
-    },
-    {
-      category: "Backend",
-      skills: [
-        { name: "Node.js", icon: <FaNodeJs className="skill-icon nodejs" /> },
+        { name: "Node.js", icon: <FaNodeJs className="skill-icon node" /> },
         { name: "Express.js", icon: <SiExpress className="skill-icon express" /> },
-        { name: "WebSocket", icon: <SiExpress className="skill-icon express" /> },
+        { name: "React.js", icon: <FaReact className="skill-icon react" /> },
+        { name: "Next.js", icon: <SiNextdotjs className="skill-icon next" /> },
       ],
     },
     {
-      category: "Database & Cloud",
+      category: "Database & Caching",
       skills: [
         { name: "MongoDB", icon: <SiMongodb className="skill-icon mongodb" /> },
-        { name: "AWS S3", icon: <SiAwsamplify className="skill-icon aws" /> },
-        { name: "Supabase", icon: <SiSupabase className="skill-icon supabase" /> },
+        { name: "Redis", icon: <SiRedis className="skill-icon redis" /> },
       ],
     },
     {
-      category: "Payments & State Management",
+      category: "Real-Time & State",
       skills: [
-        { name: "Stripe", icon: <SiStripe className="skill-icon stripe" /> },
-        { name: "Razorpay", icon: <SiRazorpay className="skill-icon razorpay" /> },
+        { name: "WebSocket", icon: <SiExpress className="skill-icon express" /> },
         { name: "Redux", icon: <SiRedux className="skill-icon redux" /> },
       ],
     },
     {
-      category: "Version Control",
+      category: "Cloud & DevOps",
       skills: [
-        { name: "Git", icon: <FaGit className="skill-icon git" /> },
-        { name: "GitHub", icon: <FaGithub className="skill-icon github" /> },
+        { name: "DigitalOcean", icon: <TbBrandVercel className="skill-icon digitalocean" /> },
+        { name: "Supabase", icon: <SiSupabase className="skill-icon supabase" /> },
+        { name: "Hostinger", icon: <SiDocker className="skill-icon docker" /> },
+        { name: "Cloudflare", icon: <SiDocker className="skill-icon docker" /> },
+        { name: "Docker (Basic)", icon: <SiDocker className="skill-icon docker" /> },
+        { name: "CI/CD (GitHub Actions)", icon: <FaGithub className="skill-icon github" /> },
       ],
     },
     {
-      category: "Tools",
+      category: "Styling & UI",
       skills: [
+        { name: "HTML5", icon: <FaHtml5 className="skill-icon html" /> },
+        { name: "CSS3", icon: <FaCss3Alt className="skill-icon css" /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="skill-icon tailwind" /> },
+      ],
+    },
+    {
+      category: "Tools & Platforms",
+      skills: [
+        { name: "Git", icon: <FaGit className="skill-icon git" /> },
+        { name: "GitHub", icon: <FaGithub className="skill-icon github" /> },
         { name: "Postman", icon: <SiPostman className="skill-icon postman" /> },
+        { name: "Figma", icon: <SiFigma className="skill-icon figma" /> },
+        { name: "ClickUp", icon: <SiClickup className="skill-icon clickup" /> },
         { name: "VS Code", icon: <SiVisualstudiocode className="skill-icon vscode" /> },
+      ],
+    },
+    {
+      category: "Payments & Registry",
+      skills: [
+        { name: "Razorpay", icon: <SiRazorpay className="skill-icon razorpay" /> },
+        { name: "Stripe", icon: <SiStripe className="skill-icon stripe" /> },
+        { name: "Verdaccio (NPM Registry)", icon: <FaGithub className="skill-icon github" /> },
       ],
     },
   ];
 
   return (
-    <div className="skills-section" id="skills">
+    <section className="skills-section" id="skills">
       <motion.h2
         variants={fadeIn("up", 0.3)}
         initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.3 }}
+        whileInView="show"
         className="section-title"
       >
-        My Skills
+        Tech Stack & Tools
       </motion.h2>
+
       <div className="skills-grid">
         {skillsData.map((category, index) => (
           <motion.div
             key={category.category}
             variants={fadeIn(index % 2 === 0 ? "right" : "left", 0.3 + index * 0.1)}
             initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
+            whileInView="show"
             className="skills-category glass"
           >
-            <h3>{category.category}</h3>
+            <h3 className="skills-heading">{category.category}</h3>
             <div className="skills-container">
               {category.skills.map((skill) => (
                 <div key={skill.name} className="skill-card">
@@ -109,7 +107,7 @@ function Skills() {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -1,176 +1,215 @@
-
-
 .project-page {
-  text-align: center;
-  padding: 40px;
-  margin-right: 20px;
-  margin-left: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  padding: 60px 20px;
+  background: #0f0f0f;
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .project-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 2.6rem;
+  /* font-weight: bold; */
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #00e5ff, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.projects {
+.filter-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
+  margin-bottom: 40px;
 }
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #eee;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  backdrop-filter: blur(4px);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: linear-gradient(135deg, #007bff, #00e5ff);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 229, 255, 0.3);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  padding: 0 10px;
+}
+
 .project-card {
   position: relative;
-  width: 300px; /* Adjust as needed */
-  height: 200px; /* Adjust as needed */
-  border-radius: 10px;
+  height: 220px;
+  border-radius: 18px;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  background-color: #1a1a1a;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
-.project-image {
+.card-image {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: opacity 0.3s ease-in-out;
 }
 
-.project-overlay {
+.card-overlay {
   position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.623);
+  color: white;
+}
+
+.card-overlay h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.stack {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 4px;
+}
+
+.project-container {
+  position: relative; /* Important for modal positioning inside Work.jsx */
+  z-index: 1;
+}
+
+.modal-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #00e5ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.modal-link:hover {
+  text-decoration: underline;
+  color: #38bdf8;
+}
+
+
+.modal-overlay {
+  position: absolute; /* ✅ Keeps modal within project section */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
-.project-overlay h3 {
-  margin: 0;
-  font-size: 18px;
-}
-
-.project-overlay p {
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-.project-container {
-  position: relative; /* Ensures the popup is positioned within this */
-}
-
-.modal-overlay {
-  position: absolute; /* Keep it inside ProjectPage */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  /* background: rgba(0, 0, 0, 0.5); */
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1000;
-  padding: 10px; /* Add padding to prevent edge clipping */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 90%; /* Make it responsive */
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  padding: 30px;
+  border-radius: 16px;
+  color: #fff;
+  width: 100%;
   max-width: 600px;
-  height: auto;
-  max-height: 80vh; /* Prevent overflow */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+  animation: modalFadeIn 0.3s ease-in-out;
   overflow-y: auto;
+  max-height: 85vh;
 }
 
-/* Responsive Design */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #00e5ff;
+}
+
+.describe {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.modal-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-content ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #eee;
+}
+
+.modal-close-button {
+  background: #ff4d4d;
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.modal-close:hover {
+  background: #e60000;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .modal-content {
-    width: 95%;
-    max-width: 90%;
-    padding: 15px;
+    padding: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .modal-content {
-    width: 100%;
-    max-width: 95%;
-    padding: 10px;
+    padding: 16px;
+    max-height: 90vh;
   }
-}
-
- 
-.modal-link:hover {
-  text-decoration: underline;
-}
-.modal-content h2 {
-  margin-bottom: 10px;
-}
-
-.describe{
-  text-align: left;
-}
-
-.list {
-  list-style-type: disc;
-  text-align: left;
-  line-height: 27px;
-  padding-left: 20px;
-  margin-bottom: 15px;
-}
-
-
-.modal-link {
-  display: block;
-  margin-top: 10px;
-  color: #007bff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.modal-close-button {
-  background: #ff4d4d;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.modal-close-button:hover {
-  background: #e60000;
 }

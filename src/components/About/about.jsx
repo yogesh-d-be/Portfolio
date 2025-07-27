@@ -6,71 +6,66 @@ import fadeIn from "../variants";
 import "./about.css";
 
 function About() {
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-  });
+  const [ref, inView] = useInView({ threshold: 0.5 });
 
   return (
-    <div className="box" id="about" ref={ref}>
-      <div className="container">
-        <div className="about-container">
-          <motion.div
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-            className="about-img-box"
-          >
-            <img
-              src={require("../../assets/yogeshd.png")}
-              alt="yogesh"
-              className="about-img"
-            />
-          </motion.div>
-          <motion.div
-            variants={fadeIn("left", 0.5)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-            className="about-content"
-          >
-            <h2>About Me.</h2>
-            <h3>
-              Aspiring MERN Stack Developer with 6 months hands-on internship
-              experience in building scalable applications.
-            </h3>
-            <p>
-              Proficient in React.js and Node.js, eager to leverage my skills in
-              a dynamic team environment. Committed to continuous learning and
-              adaptability to industry advancements. Ready to contribute
-              innovative solutions and drive team success as a dedicated and
-              dependable team player.
-            </p>
-            <div className="count-box">
-              <div>
-                <div className="count">
-                  {inView ? <CountUp start={0} end={1} duration={5} /> : null}
-                </div>
-                <div className="exp">
-                  {/* Months of */}
-                  Year of
-                  <br /> Experience
-                </div>
+    <section className="about-section" id="about" ref={ref}>
+      <div className="about-container">
+        {/* Image */}
+        <motion.div
+          variants={fadeIn("right", 0.3)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.3 }}
+          className="about-img-box"
+        >
+          <img
+            src={require("../../assets/yogeshd.png")}
+            alt="Yogesh"
+            className="about-img"
+          />
+        </motion.div>
+
+        {/* Content */}
+        <motion.div
+          variants={fadeIn("left", 0.5)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.3 }}
+          className="about-content"
+        >
+          <h2 className="about-heading">About Me</h2>
+          <p className="about-tagline">
+            MERN Stack Developer • Technical Trainer • Backend Engineer
+          </p>
+          <p className="about-description">
+            I'm a passionate full-stack web developer with hands-on experience building real-world applications using the MERN stack. I specialize in backend engineering, real-time integrations, and deployment, while also mentoring students and junior devs. I love turning complex problems into elegant, scalable solutions and thrive in collaborative environments.
+          </p>
+
+          {/* Stats */}
+          <div className="count-box">
+            <div>
+              <div className="count">
+                {inView && <CountUp start={0} end={1} duration={5} />}+
               </div>
-              <div>
-                <div className="count">
-                  {inView ? <CountUp start={0} end={6} duration={3} /> : null}
-                </div>
-                <div className="exp">
-                  Projects
-                  <br /> completed
-                </div>
-              </div>
+              <div className="exp">Years<br />Experience</div>
             </div>
-          </motion.div>
-        </div>
+            <div>
+              <div className="count">
+                {inView && <CountUp start={0} end={6} duration={3} />}+
+              </div>
+              <div className="exp">Projects<br />Completed</div>
+            </div>
+            <div>
+              <div className="count">
+                {inView && <CountUp start={0} end={30} duration={3} />}+
+              </div>
+              <div className="exp">Students<br />Mentored</div>
+            </div>
+          </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
 
