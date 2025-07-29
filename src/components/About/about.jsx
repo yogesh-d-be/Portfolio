@@ -36,10 +36,10 @@ function About() {
         >
           <h2 className="about-heading">About Me</h2>
           <p className="about-tagline">
-            MERN Stack Developer • Technical Trainer • Backend Engineer
+            Full Stack Developer • Backend Engineer
           </p>
           <p className="about-description">
-            I'm a passionate full-stack web developer with hands-on experience building real-world applications using the MERN stack. I specialize in backend engineering, real-time integrations, and deployment, while also mentoring students and junior devs. I love turning complex problems into elegant, scalable solutions and thrive in collaborative environments.
+            I'm a full stack developer focused on building performant web applications using the MERN stack. I enjoy designing scalable backend systems, integrating real-time functionality, and deploying reliable cloud-based solutions. With a strong foundation in backend logic and API architecture, I aim to deliver clean, maintainable code that solves real business problems.
           </p>
 
           {/* Stats */}
@@ -58,9 +58,9 @@ function About() {
             </div>
             <div>
               <div className="count">
-                {inView && <CountUp start={0} end={30} duration={3} />}+
+                {inView && <CountUp start={0} end={5} duration={3} />}+
               </div>
-              <div className="exp">Students<br />Mentored</div>
+              <div className="exp">Web Apps<br />Deployed</div>
             </div>
           </div>
         </motion.div>

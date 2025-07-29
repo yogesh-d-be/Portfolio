@@ -30,7 +30,7 @@ function Banner() {
           className="sub-heading"
         >
           <TypeAnimation
-            sequence={["Full Stack Developer", 2000, "MERN Stack Trainer", 2000]}
+            sequence={["Full Stack Developer", 2000, "MERN Stack Developer", 2000]}
             wrapper="span"
             speed={50}
             className="animated-text"
@@ -44,7 +44,7 @@ function Banner() {
           whileInView="show"
           className="role-explain"
         >
-          I specialize in building scalable full-stack web applications, training aspiring backend developers, and integrating real-time and cloud-based technologies to solve real-world problems.
+          I build robust and scalable full-stack web applications using modern technologies. Passionate about solving real-world problems with clean architecture, secure APIs, and optimized backend systems.
         </motion.p>
 
         <motion.div
@@ -58,7 +58,7 @@ function Banner() {
           </button>
 
           <a
-            href="https://drive.google.com/uc?export=download&id=1c1JTumIbOfxzP0fqtu8ljFApl5VIOxs6"
+            href="https://drive.google.com/uc?export=download&id=1qGBX3Xf-fj3FmmQA6TP7II-pcJu2yLKf"
             download="Yogesh_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
