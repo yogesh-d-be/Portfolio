@@ -58,7 +58,7 @@ function Banner() {
           </button>
 
           <a
-            href="https://drive.google.com/uc?export=download&id=1qGBX3Xf-fj3FmmQA6TP7II-pcJu2yLKf"
+            href="https://drive.google.com/uc?export=download&id=1m-8r_s7e7KKDrUJ3nqv2hKClq5hIhr53"
             download="Yogesh_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
