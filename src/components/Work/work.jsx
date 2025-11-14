@@ -26,9 +26,9 @@ const ProjectPage = () => {
         "Separate panels for user, vendor, and admin"
       ],
       links: {
-        user: "https://servigozapi.99wincart.com",
-        vendor: "https://servigozapivendor.99wincart.com",
-        admin: "https://servigozapiadmin.99wincart.com"
+        user: "https://servigoz.99wincart.com",
+        vendor: "https://servigozvendor.99wincart.com",
+        admin: "https://servigozadmin.99wincart.com"
       }
     },
 {
