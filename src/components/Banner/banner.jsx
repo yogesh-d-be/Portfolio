@@ -57,7 +57,7 @@ function Banner() {
             Contact Me
           </button>
 
-          <a
+          {/* <a
             href="https://drive.google.com/uc?export=download&id=1QZt5j4Fhx8p6OSWx35xnSVjhzQpFLU8l"
             download="Yogesh_Resume.pdf"
             target="_blank"
@@ -66,7 +66,7 @@ function Banner() {
           >
             <img src={require("../../assets/downloads.png")} alt="resume" className="download" />
             My Resume
-          </a>
+          </a> */}
         </motion.div>
 
         <motion.div
